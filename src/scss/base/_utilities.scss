@@ -1,0 +1,38 @@
+.container {
+    max-width: 115rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn {
+    background: linear-gradient(to right, $colorLimeGreen 0%, $colorBrightCyan 100%);
+    color: $colorWhite;
+    font-size: 1.4rem;
+    padding: $separation/3.5 $separation/1.5;
+    border-radius: $separation;
+    font-weight: $fontBold;
+    display: inline-block;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        margin: auto auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        opacity: .3;
+        border-radius: $separation;
+        transition: all .2s ease-in-out;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &:hover::before {
+        background: $colorWhite;
+    }
+}

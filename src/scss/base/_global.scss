@@ -1,0 +1,48 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $font;
+    font-size: 1.8rem;
+    color: $colorGrayishBlue;
+    background-color: $colorLightGray;
+}
+
+h1,
+h2,
+h3 {
+    color: $colorDarkBlue;
+    font-weight: $fontNormal;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+p {
+    color: $colorGrayishBlue;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}

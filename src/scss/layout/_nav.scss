@@ -1,0 +1,106 @@
+.nav {
+    position: fixed;
+    width: 100%;
+    background-color: $colorLightGray;
+    z-index: 100;
+}
+
+.box-shadow {
+    z-index: 100;
+    -webkit-box-shadow: 0px 0px 16px 1px rgba(45, 47, 61, .5);
+    -moz-box-shadow: 0px 0px 16px 1px rgba(45, 47, 61, .5);
+    box-shadow: 0px 0px 16px 1px rgba(45, 47, 61, .5);
+}
+
+.nav__content {
+    padding: $separation/2 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav__brand {
+        display: flex;
+    }
+
+    .nav__toggle {
+        width: 2.5rem;
+        height: 2rem;
+        object-fit: contain;
+
+        @include laptop {
+            display: none;
+        }
+    }
+}
+
+.nav__links {
+    position: fixed;
+    display: none; // Display: flex para mostrar el menú movil
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: $separation*1.7 auto 0 auto;
+    /* height: min-content; */
+    text-align: center;
+    z-index: 100;
+    /* Mostrar menu por encima del backdrop */
+    width: 91%;
+    max-width: 40rem;
+    background-color: $colorLightGray;
+    padding: $separation/2.5 0;
+    border-radius: 2%;
+
+    a {
+        padding: $separation/3.6 0;
+        color: $colorDarkBlue;
+        font-size: $separation/2.7;
+    }
+
+    @include laptop {
+        position: relative;
+        display: flex;
+        gap: $separation/2;
+        padding: 0;
+        margin: 0;
+        flex-direction: row;
+        width: inherit;
+
+        a {
+            color: $colorGrayishBlue;
+            padding: 0;
+            font-size: initial;
+        }
+    }
+}
+
+.nav__link {
+    position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 5px;
+        margin-top: 3.4rem;
+        background: linear-gradient(to right, $colorLimeGreen 0%, $colorBrightCyan 100%);
+        position: absolute;
+        transition: all .2s ease;
+    }
+
+    &:hover:after {
+        width: 100%;
+    }
+}
+
+.nav__btn {
+    display: none;
+
+    @include laptop {
+        display: flex;
+    }
+
+    @include desktop {
+        margin-right: 0;
+    }
+}
